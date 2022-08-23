@@ -61,6 +61,7 @@ const TicTacToe = () => {
     setWinner(null);
     setCells(Array(9).fill(""));
   };
+  
   const Cell = ({ num }) => {
     return <td onClick={() => handleClick(num)}>{cells[num]}</td>;
   };
