@@ -35,7 +35,10 @@ const TicTacToe = () => {
           squeares[pattern[1]] === squeares[pattern[2]]
         ) {
           setWinner(squeares[pattern[0]]);
+        } else {
+          setWinner("Draw");
         }
+
       });
     }
   };
@@ -44,6 +47,7 @@ const TicTacToe = () => {
       alert("already clicked");
       return;
     }
+    
     let squeares = [...cells];
     if (turn === "x") {
       squeares[num] = "x";
@@ -61,7 +65,7 @@ const TicTacToe = () => {
     setWinner(null);
     setCells(Array(9).fill(""));
   };
-  
+
   const Cell = ({ num }) => {
     return <td onClick={() => handleClick(num)}>{cells[num]}</td>;
   };
