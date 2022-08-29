@@ -41,6 +41,7 @@ const TicTacToe = () => {
 
       });
     }
+
   };
   const handleClick = (num) => {
     if (cells[num] !== "") {
