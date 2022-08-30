@@ -35,9 +35,7 @@ const TicTacToe = () => {
           squeares[pattern[1]] === squeares[pattern[2]]
         ) {
           setWinner(squeares[pattern[0]]);
-        } else {
-          setWinner("Draw");
-        }
+        } 
 
       });
     }
