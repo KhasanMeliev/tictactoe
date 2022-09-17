@@ -35,18 +35,16 @@ const TicTacToe = () => {
           squeares[pattern[1]] === squeares[pattern[2]]
         ) {
           setWinner(squeares[pattern[0]]);
-        } 
-
+        }
       });
     }
-
   };
   const handleClick = (num) => {
     if (cells[num] !== "") {
       alert("already clicked");
       return;
     }
-    
+
     let squeares = [...cells];
     if (turn === "x") {
       squeares[num] = "x";
@@ -57,7 +55,6 @@ const TicTacToe = () => {
     }
     checkWinner(squeares);
     setCells(squeares);
-    console.log(squeares);
   };
 
   const handleRestart = () => {
